@@ -19,4 +19,9 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('author/<str:name>/', views.author_details, name='author_details'),
+    path('authors/', views.author_list, name='author_list'),
+    path('book/<int:pk>/', views.book_detail, name='book_detail'),
+    path('books/', views.book_list, name='book_list'),
+    path('book_list_ordered/', views.book_list_ordered, name='book_list_ordered'),
 ]
