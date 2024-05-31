@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Author, Book
+from books import views
 
 def author_details(request, name):
     author = get_object_or_404(Author, name=name)
